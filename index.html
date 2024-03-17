@@ -1,0 +1,107 @@
+<html>
+    <header>
+        <title>Fruit Page</title>
+        <style>
+            body{
+                background-color: rgb(252, 252, 163);
+            }
+            h1{
+                text-align: center;
+                font-family:  'Brush Script MT', cursive;
+                font-size: 40px;
+            }
+            td{
+                width:44%;  
+            }
+            .hotspot{
+                cursor: pointer;
+            }
+            .fruit-info{
+                display:none;
+                font-size: Verdana;
+                font-family: Verdana;
+                background-color: #CAE7E3;
+                width:380px;
+                height:200px;
+                border-radius: 10px;
+                padding: 10px;
+                padding-left: 25px;
+              
+            }
+        </style>      
+    </header>
+    <body>
+        <br> 
+        <h1>Fruits</h1>
+        <br><br>
+        <div>
+            <table>
+                <tr>
+                    <td class="hotspot">
+                        <img src="banana.jpg" alt="/banana" onclick="showInfo('banana')">
+                    </td>
+                    <td class="hotspot">
+                        <img src="apple.jpg" alt="/apple" width="200px"  onclick="showInfo('apple')">
+                    </td>
+                    <td class="hotspot" style="padding-right:40px;">
+                        <img src="orange.jpg" alt="/orange" width="200px"  onclick="showInfo('orange')">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="fruit-info" id="banana-info" >
+                        <h2>Banana</h2>
+                        <p>
+                            <ul>
+                                <li>Lowering cholesterol</li>
+                                <li>Reducing the risk of colorectal cancer</li>
+                                <li>Maintaining a healthy weight</li>
+                                <li>Keeping blood sugar normal</li>
+                            </ul>
+                        </p>
+                    </td>
+                    <td >
+                        <div class="fruit-info" id="apple-info" >
+                            <h2>Apple</h2>
+                            <p>
+                                <ul>
+                                    <li>Protect against type 2 diabetes</li>
+                                    <li>Help with weight loss</li>
+                                    <li>Support lung health.</li>
+                                    <li>Support immune system health</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="fruit-info" id="orange-info">
+                            <h2>Orange</h2>
+                            <p>
+                                <ul>
+                                    <li>Weight loss</li>
+                                    <li>Delaying signs of aging</li>
+                                    <li>Promoting heart and eye health</li>
+                                    <li>Aiding in treating diabetes, anemia, and polycystic ovary syndrome</li>
+                                </ul>
+                            </p>
+
+                        </div>
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+
+        <script>
+            function showInfo(fruit) {
+              var infoDiv = document.getElementById(fruit + "-info");
+              if (infoDiv.style.display === "none") {
+                infoDiv.style.display = "block";
+              } else {
+                infoDiv.style.display = "none";
+              }
+            }
+        </script>
+          
+    </body>
+</html>
